@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "01NA8OQGTIo=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\GioAngeloLat\\Documents\\Lat-IT2_IPT\\S01\\Discussion\\S02_IPT\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem\\EmployeeManagementSystem.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\GioAngeloLat\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.8\\system.configuration.configurationmanager.9.0.8.nupkg.sha512",
+    "C:\\Users\\GioAngeloLat\\.nuget\\packages\\system.data.oledb\\9.0.8\\system.data.oledb.9.0.8.nupkg.sha512",
+    "C:\\Users\\GioAngeloLat\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.8\\system.diagnostics.eventlog.9.0.8.nupkg.sha512",
+    "C:\\Users\\GioAngeloLat\\.nuget\\packages\\system.diagnostics.performancecounter\\9.0.8\\system.diagnostics.performancecounter.9.0.8.nupkg.sha512",
+    "C:\\Users\\GioAngeloLat\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.8\\system.security.cryptography.protecteddata.9.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}
