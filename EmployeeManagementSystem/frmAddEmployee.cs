@@ -108,32 +108,35 @@ namespace EmployeeManagementSystem
             EMS_data = "SELECT * FROM [tblEmployeeData] WHERE [ID] = " + frmMasterData.selectedTransaction + " OR [EmployeeNumber] = '" + txtEmpID.Text + "'";
             dtg_addrequestor = CRUD.CRUD.RETRIEVESINGLE(EMS_data);
 
-            if (dtg_addrequestor == true)
+            if (string.IsNullOrEmpty(frmMasterData.selectedTransaction))
             {
-                DialogResult result = MessageBox.Show("This account '" + txtRequestorName.Text + "' already exist. Do you want to update?", "Already Exists.",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Please select a record to delete", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this record?", "Confirm Delete", 
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                string delete_requestor = "DELETE FROM [tblEmployeeData] WHERE [ID] = " + frmMasterData.selectedTransaction;
                 
-                if (result == DialogResult.Yes)
+                if (CRUD.CRUD.CUD(delete_requestor))
                 {
-                    // Update existing record using UniqueID
-                    string update_requestor = "UPDATE [tblEmployeeData] SET [EmployeeNumber] = '" + txtEmpID.Text + "', [RequestorName] = '" + txtRequestorName.Text + "', [RequestorEmail] = '" + txtEmailAddress.Text + "', [Section] = '" + cmbSection.Text + "', [LocalNumber] = '" + txtLocalNumber.Text + "' WHERE [ID] = " + frmMasterData.selectedTransaction;
+                    MessageBox.Show("Deleted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     
-                    if (CRUD.CRUD.CUD(update_requestor))
-                    {
-                        MessageBox.Show("Updated Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        NotifyParentToRefresh();
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Update Failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    // Clear fields after successful deletion
+                    ClearFields();
+                    
+                    // Clear the selected transaction
+                    frmMasterData.selectedTransaction = "";
+                    
+                    NotifyParentToRefresh();
+                    this.Close();
                 }
                 else
                 {
-                    // Clear all fields and close form
-                    ClearFields();
-                    this.Close();
+                    MessageBox.Show("Delete Failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
