@@ -80,12 +80,14 @@ namespace EmployeeManagementSystem
         }
         private void clearDetails()
         {
+            frmMasterData.selectedTransaction = "";
             frmMasterData.EmployeeNumber = "";
             frmMasterData.RequestorName = "";
             frmMasterData.Section = "";
             frmMasterData.LocalNumber = "";
             frmMasterData.EmailAddress = "";
         }
+
 
 
     }
