@@ -56,7 +56,7 @@
             // 
             btnAddEmployee.BackColor = Color.DarkSlateGray;
             btnAddEmployee.Dock = DockStyle.Top;
-            btnAddEmployee.Font = new Font("SansSerif", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point, 2);
+            btnAddEmployee.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAddEmployee.ForeColor = Color.White;
             btnAddEmployee.Location = new Point(0, 54);
             btnAddEmployee.Name = "btnAddEmployee";
@@ -70,7 +70,7 @@
             // 
             btnMasterData.BackColor = Color.DarkSlateGray;
             btnMasterData.Dock = DockStyle.Top;
-            btnMasterData.Font = new Font("SansSerif", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point, 2);
+            btnMasterData.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMasterData.ForeColor = Color.White;
             btnMasterData.Location = new Point(0, 0);
             btnMasterData.Name = "btnMasterData";

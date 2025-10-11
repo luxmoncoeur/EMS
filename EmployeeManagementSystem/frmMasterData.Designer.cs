@@ -44,17 +44,17 @@
             pnlChildTitle.Dock = DockStyle.Top;
             pnlChildTitle.Location = new Point(0, 0);
             pnlChildTitle.Name = "pnlChildTitle";
-            pnlChildTitle.Size = new Size(748, 48);
+            pnlChildTitle.Size = new Size(855, 54);
             pnlChildTitle.TabIndex = 0;
             // 
             // lblMasterData
             // 
             lblMasterData.AutoSize = true;
-            lblMasterData.Font = new Font("SansSerif", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 2);
+            lblMasterData.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblMasterData.ForeColor = SystemColors.InfoText;
-            lblMasterData.Location = new Point(12, 9);
+            lblMasterData.Location = new Point(18, 17);
             lblMasterData.Name = "lblMasterData";
-            lblMasterData.Size = new Size(151, 22);
+            lblMasterData.Size = new Size(119, 20);
             lblMasterData.TabIndex = 0;
             lblMasterData.Text = "MASTER DATA";
             lblMasterData.Click += lblMasterData_Click;
@@ -66,9 +66,9 @@
             dtgMasterData.Dock = DockStyle.Fill;
             dtgMasterData.EditMode = DataGridViewEditMode.EditProgrammatically;
             dtgMasterData.GridColor = SystemColors.ActiveCaptionText;
-            dtgMasterData.Location = new Point(0, 48);
+            dtgMasterData.Location = new Point(0, 54);
             dtgMasterData.Name = "dtgMasterData";
-            dtgMasterData.Size = new Size(748, 275);
+            dtgMasterData.Size = new Size(855, 312);
             dtgMasterData.TabIndex = 1;
             dtgMasterData.CellClick += dtgMasterData_CellClick;
             dtgMasterData.CellContentClick += dtgMasterData_CellContentClick;
@@ -77,10 +77,10 @@
             // btnEditData
             // 
             btnEditData.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnEditData.Font = new Font("SansSerif", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 2);
-            btnEditData.Location = new Point(585, 329);
+            btnEditData.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
+            btnEditData.Location = new Point(669, 373);
             btnEditData.Name = "btnEditData";
-            btnEditData.Size = new Size(149, 39);
+            btnEditData.Size = new Size(170, 44);
             btnEditData.TabIndex = 2;
             btnEditData.Text = "EDIT DATA";
             btnEditData.UseVisualStyleBackColor = true;
@@ -90,24 +90,26 @@
             // 
             lblTransactionNo.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             lblTransactionNo.AutoSize = true;
-            lblTransactionNo.Font = new Font("SansSerif", 9.749999F, FontStyle.Bold, GraphicsUnit.Point, 2);
-            lblTransactionNo.Location = new Point(16, 343);
+            lblTransactionNo.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
+            lblTransactionNo.Location = new Point(18, 389);
             lblTransactionNo.Name = "lblTransactionNo";
-            lblTransactionNo.Size = new Size(160, 15);
+            lblTransactionNo.Size = new Size(173, 17);
             lblTransactionNo.TabIndex = 3;
-            lblTransactionNo.Text = "TRANSACTION NUMBER";
+            lblTransactionNo.Text = "<TRANSACTION NUMBER>";
+            lblTransactionNo.Click += lblTransactionNo_Click;
             // 
             // frmMasterData
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(748, 373);
+            ClientSize = new Size(855, 423);
             Controls.Add(lblTransactionNo);
             Controls.Add(btnEditData);
             Controls.Add(dtgMasterData);
             Controls.Add(pnlChildTitle);
+            Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
             Name = "frmMasterData";
-            Padding = new Padding(0, 0, 0, 50);
+            Padding = new Padding(0, 0, 0, 57);
             Text = "frmMasterData";
             Load += frmMasterData_Load_1;
             pnlChildTitle.ResumeLayout(false);
