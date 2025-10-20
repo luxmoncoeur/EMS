@@ -290,11 +290,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\GioAngeloLat\\Documents\\Lat-IT2_IPT\\S01\\Discussion\\S02_IPT\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem\\EmployeeManagementSystem.csproj",
+      "projectUniqueName": "C:\\Users\\GioAngeloLat\\Desktop\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem.csproj",
       "projectName": "EmployeeManagementSystem",
-      "projectPath": "C:\\Users\\GioAngeloLat\\Documents\\Lat-IT2_IPT\\S01\\Discussion\\S02_IPT\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem\\EmployeeManagementSystem.csproj",
+      "projectPath": "C:\\Users\\GioAngeloLat\\Desktop\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem.csproj",
       "packagesPath": "C:\\Users\\GioAngeloLat\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\GioAngeloLat\\Documents\\Lat-IT2_IPT\\S01\\Discussion\\S02_IPT\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem\\obj\\",
+      "outputPath": "C:\\Users\\GioAngeloLat\\Desktop\\EMS\\EmployeeManagementSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\GioAngeloLat\\AppData\\Roaming\\NuGet\\NuGet.Config",

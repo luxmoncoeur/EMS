@@ -50,7 +50,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.LightCyan;
+            panel1.BackColor = Color.Teal;
             panel1.Controls.Add(label1);
             panel1.Location = new Point(1, 0);
             panel1.Name = "panel1";
@@ -60,10 +60,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(11, 20);
+            label1.Font = new Font("Segoe UI", 22F, FontStyle.Bold);
+            label1.ForeColor = SystemColors.ButtonHighlight;
+            label1.Location = new Point(11, 9);
             label1.Name = "label1";
-            label1.Size = new Size(121, 21);
+            label1.Size = new Size(222, 41);
             label1.TabIndex = 0;
             label1.Text = "Add Employee";
             // 
@@ -92,7 +93,7 @@
             // 
             // btnDelete
             // 
-            btnDelete.BackColor = Color.Teal;
+            btnDelete.BackColor = Color.MediumTurquoise;
             btnDelete.ForeColor = Color.MintCream;
             btnDelete.Location = new Point(387, 228);
             btnDelete.Name = "btnDelete";
@@ -160,7 +161,7 @@
             // 
             // btnInsertUpdate
             // 
-            btnInsertUpdate.BackColor = Color.Teal;
+            btnInsertUpdate.BackColor = Color.MediumTurquoise;
             btnInsertUpdate.ForeColor = Color.MintCream;
             btnInsertUpdate.Location = new Point(202, 228);
             btnInsertUpdate.Name = "btnInsertUpdate";
@@ -181,7 +182,7 @@
             // 
             // button1
             // 
-            button1.BackColor = Color.Teal;
+            button1.BackColor = Color.MediumTurquoise;
             button1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.MintCream;
             button1.Location = new Point(476, 32);
@@ -190,6 +191,7 @@
             button1.TabIndex = 4;
             button1.Text = "Search";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // txtLocalNumber
             // 

@@ -72,5 +72,10 @@ namespace EmployeeManagementSystem
             string select_tblrequestorlist = "SELECT * FROM tblEmployeeData ORDER BY EmployeeNumber DESC";
             CRUD.CRUD.RETRIEVEDTG(dtgMasterData, select_tblrequestorlist);
         }
+
+        internal void RefreshDataGrid(string query)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

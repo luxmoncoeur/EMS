@@ -39,7 +39,7 @@
             // 
             // pnlChildTitle
             // 
-            pnlChildTitle.BackColor = Color.LightCyan;
+            pnlChildTitle.BackColor = Color.LightSeaGreen;
             pnlChildTitle.Controls.Add(lblMasterData);
             pnlChildTitle.Dock = DockStyle.Top;
             pnlChildTitle.Location = new Point(0, 0);
@@ -51,7 +51,7 @@
             // 
             lblMasterData.AutoSize = true;
             lblMasterData.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMasterData.ForeColor = SystemColors.InfoText;
+            lblMasterData.ForeColor = SystemColors.ButtonFace;
             lblMasterData.Location = new Point(18, 17);
             lblMasterData.Name = "lblMasterData";
             lblMasterData.Size = new Size(119, 20);
@@ -96,7 +96,6 @@
             lblTransactionNo.Size = new Size(173, 17);
             lblTransactionNo.TabIndex = 3;
             lblTransactionNo.Text = "<TRANSACTION NUMBER>";
-            lblTransactionNo.Click += lblTransactionNo_Click;
             // 
             // frmMasterData
             // 

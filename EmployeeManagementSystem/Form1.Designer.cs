@@ -42,7 +42,7 @@
             // 
             // pnlSideMenu
             // 
-            pnlSideMenu.BackColor = Color.PowderBlue;
+            pnlSideMenu.BackColor = Color.Teal;
             pnlSideMenu.Controls.Add(btnAddEmployee);
             pnlSideMenu.Controls.Add(btnMasterData);
             pnlSideMenu.Dock = DockStyle.Left;
@@ -54,7 +54,7 @@
             // 
             // btnAddEmployee
             // 
-            btnAddEmployee.BackColor = Color.DarkSlateGray;
+            btnAddEmployee.BackColor = Color.MediumTurquoise;
             btnAddEmployee.Dock = DockStyle.Top;
             btnAddEmployee.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAddEmployee.ForeColor = Color.White;
@@ -68,7 +68,7 @@
             // 
             // btnMasterData
             // 
-            btnMasterData.BackColor = Color.DarkSlateGray;
+            btnMasterData.BackColor = Color.MediumTurquoise;
             btnMasterData.Dock = DockStyle.Top;
             btnMasterData.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMasterData.ForeColor = Color.White;
@@ -83,7 +83,7 @@
             // pnlTitleBar
             // 
             pnlTitleBar.AccessibleName = "";
-            pnlTitleBar.BackColor = Color.PowderBlue;
+            pnlTitleBar.BackColor = Color.Teal;
             pnlTitleBar.Controls.Add(btnClose);
             pnlTitleBar.Controls.Add(btnMaximize);
             pnlTitleBar.Controls.Add(btnMinimize);
