@@ -95,7 +95,7 @@ namespace EmployeeManagementSystem
 
         private void NotifyParentToRefresh()
         {
-            
+
             foreach (Form form in Application.OpenForms)
             {
                 if (form is frmMasterData masterDataForm)
@@ -108,14 +108,14 @@ namespace EmployeeManagementSystem
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-          
+
             if (string.IsNullOrEmpty(frmMasterData.selectedTransaction))
             {
                 MessageBox.Show("Please select a record to delete", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-           
+
             DialogResult result = MessageBox.Show(
                 "Are you sure you want to delete this record?",
                 "Confirm Delete",
@@ -124,15 +124,15 @@ namespace EmployeeManagementSystem
 
             if (result == DialogResult.Yes)
             {
-             
+
                 string deleteRequestor = $"DELETE FROM [tblEmployeeData] WHERE [ID] = {frmMasterData.selectedTransaction}";
 
-                
+
                 if (CRUD.CRUD.CUD(deleteRequestor))
                 {
                     MessageBox.Show("Deleted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    NotifyParentToRefresh();  
-                    this.Close();             
+                    NotifyParentToRefresh();
+                    this.Close();
                 }
                 else
                 {
@@ -143,7 +143,49 @@ namespace EmployeeManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            if (string.IsNullOrWhiteSpace(txtEmpID.Text))
+            {
+                MessageBox.Show("Please enter an Employee Number to search.", "Input Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string searchQuery = $"SELECT * FROM [tblEmployeeData] WHERE [EmployeeNumber] = '{txtEmpID.Text}'";
+
+            // Use CRUD.RETRIEVESINGLE to check if employee exists
+            bool employeeExists = CRUD.CRUD.RETRIEVESINGLE(searchQuery);
+
+            if (employeeExists)
+            {
+                MessageBox.Show("Employee found.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtEmpID.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Employee not found.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                // Optionally clear fields or handle as needed
+                txtEmpID.Clear();
+            }
+        }
+
+        private void cmbSection_DropDown(object sender, EventArgs e)
+        {
+
+            try
+            {
+                cmbSection.DataSource = null;
+                cmbSection.Items.Clear();
+
+                bool loaded = CRUD.CRUD.RETRIEVECBO(cmbSection, "SELECT ID, Section FROM tblSections", "Section", "ID");
+
+                if (!loaded)
+                {
+                    MessageBox.Show("Failed to load sections.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading sections: " + ex.Message);
+            }
         }
     }
 } 

@@ -39,7 +39,7 @@
             // 
             // pnlChildTitle
             // 
-            pnlChildTitle.BackColor = Color.LightSeaGreen;
+            pnlChildTitle.BackColor = Color.FromArgb(116, 155, 194);
             pnlChildTitle.Controls.Add(lblMasterData);
             pnlChildTitle.Dock = DockStyle.Top;
             pnlChildTitle.Location = new Point(0, 0);
@@ -50,11 +50,11 @@
             // lblMasterData
             // 
             lblMasterData.AutoSize = true;
-            lblMasterData.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMasterData.Font = new Font("Segoe UI", 22F, FontStyle.Bold);
             lblMasterData.ForeColor = SystemColors.ButtonFace;
-            lblMasterData.Location = new Point(18, 17);
+            lblMasterData.Location = new Point(18, 10);
             lblMasterData.Name = "lblMasterData";
-            lblMasterData.Size = new Size(119, 20);
+            lblMasterData.Size = new Size(225, 41);
             lblMasterData.TabIndex = 0;
             lblMasterData.Text = "MASTER DATA";
             lblMasterData.Click += lblMasterData_Click;
@@ -77,7 +77,8 @@
             // btnEditData
             // 
             btnEditData.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnEditData.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
+            btnEditData.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            btnEditData.ForeColor = Color.FromArgb(33, 52, 72);
             btnEditData.Location = new Point(669, 373);
             btnEditData.Name = "btnEditData";
             btnEditData.Size = new Size(170, 44);
@@ -90,10 +91,11 @@
             // 
             lblTransactionNo.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             lblTransactionNo.AutoSize = true;
-            lblTransactionNo.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
-            lblTransactionNo.Location = new Point(18, 389);
+            lblTransactionNo.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            lblTransactionNo.ForeColor = Color.FromArgb(33, 52, 72);
+            lblTransactionNo.Location = new Point(18, 385);
             lblTransactionNo.Name = "lblTransactionNo";
-            lblTransactionNo.Size = new Size(173, 17);
+            lblTransactionNo.Size = new Size(212, 21);
             lblTransactionNo.TabIndex = 3;
             lblTransactionNo.Text = "<TRANSACTION NUMBER>";
             // 

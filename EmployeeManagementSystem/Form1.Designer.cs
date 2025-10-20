@@ -36,13 +36,15 @@
             btnMaximize = new Button();
             btnMinimize = new Button();
             pnlStage = new Panel();
+            bxtSettings = new Button();
             pnlSideMenu.SuspendLayout();
             pnlTitleBar.SuspendLayout();
             SuspendLayout();
             // 
             // pnlSideMenu
             // 
-            pnlSideMenu.BackColor = Color.Teal;
+            pnlSideMenu.BackColor = Color.FromArgb(164, 204, 217);
+            pnlSideMenu.Controls.Add(bxtSettings);
             pnlSideMenu.Controls.Add(btnAddEmployee);
             pnlSideMenu.Controls.Add(btnMasterData);
             pnlSideMenu.Dock = DockStyle.Left;
@@ -54,7 +56,7 @@
             // 
             // btnAddEmployee
             // 
-            btnAddEmployee.BackColor = Color.MediumTurquoise;
+            btnAddEmployee.BackColor = Color.FromArgb(70, 130, 169);
             btnAddEmployee.Dock = DockStyle.Top;
             btnAddEmployee.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAddEmployee.ForeColor = Color.White;
@@ -68,7 +70,7 @@
             // 
             // btnMasterData
             // 
-            btnMasterData.BackColor = Color.MediumTurquoise;
+            btnMasterData.BackColor = Color.FromArgb(70, 130, 169);
             btnMasterData.Dock = DockStyle.Top;
             btnMasterData.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMasterData.ForeColor = Color.White;
@@ -83,7 +85,7 @@
             // pnlTitleBar
             // 
             pnlTitleBar.AccessibleName = "";
-            pnlTitleBar.BackColor = Color.Teal;
+            pnlTitleBar.BackColor = Color.FromArgb(128, 161, 186);
             pnlTitleBar.Controls.Add(btnClose);
             pnlTitleBar.Controls.Add(btnMaximize);
             pnlTitleBar.Controls.Add(btnMinimize);
@@ -133,12 +135,26 @@
             // 
             // pnlStage
             // 
-            pnlStage.BackColor = Color.Ivory;
+            pnlStage.BackColor = Color.FromArgb(234, 239, 239);
             pnlStage.Dock = DockStyle.Fill;
             pnlStage.Location = new Point(229, 48);
             pnlStage.Name = "pnlStage";
             pnlStage.Size = new Size(599, 449);
             pnlStage.TabIndex = 2;
+            // 
+            // bxtSettings
+            // 
+            bxtSettings.BackColor = Color.FromArgb(70, 130, 169);
+            bxtSettings.Dock = DockStyle.Top;
+            bxtSettings.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            bxtSettings.ForeColor = Color.White;
+            bxtSettings.Location = new Point(0, 108);
+            bxtSettings.Name = "bxtSettings";
+            bxtSettings.Size = new Size(229, 54);
+            bxtSettings.TabIndex = 2;
+            bxtSettings.Text = "SETTINGS";
+            bxtSettings.UseVisualStyleBackColor = false;
+            bxtSettings.Click += bxtSettings_Click;
             // 
             // frmMotherForm
             // 
@@ -167,5 +183,6 @@
         private Button btnAddEmployee;
         private Button btnMasterData;
         private Panel pnlStage;
+        private Button bxtSettings;
     }
 }

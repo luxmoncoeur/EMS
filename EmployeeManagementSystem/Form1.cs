@@ -88,7 +88,10 @@ namespace EmployeeManagementSystem
             frmMasterData.EmailAddress = "";
         }
 
-
-
+        private void bxtSettings_Click(object sender, EventArgs e)
+        {
+            clearDetails();
+            OpenChildForm(new frmSettings());
+        }
     }
 }

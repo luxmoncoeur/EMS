@@ -58,3 +58,4 @@ C:\Users\GioAngeloLat\Desktop\EMS\EmployeeManagementSystem\obj\Debug\net8.0-wind
 C:\Users\GioAngeloLat\Desktop\EMS\EmployeeManagementSystem\obj\Debug\net8.0-windows\EmployeeManagementSystem.genruntimeconfig.cache
 C:\Users\GioAngeloLat\Desktop\EMS\EmployeeManagementSystem\obj\Debug\net8.0-windows\ref\EmployeeManagementSystem.dll
 C:\Users\GioAngeloLat\Desktop\EMS\EmployeeManagementSystem\obj\Debug\net8.0-windows\EmployeeManagementSystem.LoginPage.resources
+C:\Users\GioAngeloLat\Desktop\EMS\EmployeeManagementSystem\obj\Debug\net8.0-windows\EmployeeManagementSystem.frmSettings.resources

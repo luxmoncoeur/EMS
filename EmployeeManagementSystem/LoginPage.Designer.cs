@@ -39,11 +39,11 @@
             // lblTitle
             // 
             lblTitle.AutoSize = true;
-            lblTitle.Font = new Font("Yu Gothic", 72F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitle.ForeColor = Color.DarkCyan;
-            lblTitle.Location = new Point(345, 33);
+            lblTitle.Font = new Font("Yu Gothic", 87.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.ForeColor = Color.FromArgb(70, 130, 169);
+            lblTitle.Location = new Point(327, 22);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(268, 124);
+            lblTitle.Size = new Size(328, 151);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "EMS";
             // 
@@ -68,6 +68,7 @@
             // 
             lblUsername.AutoSize = true;
             lblUsername.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblUsername.ForeColor = Color.FromArgb(33, 52, 72);
             lblUsername.Location = new Point(148, 195);
             lblUsername.Name = "lblUsername";
             lblUsername.Size = new Size(83, 21);
@@ -78,6 +79,7 @@
             // 
             lblPassword.AutoSize = true;
             lblPassword.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPassword.ForeColor = Color.FromArgb(33, 52, 72);
             lblPassword.Location = new Point(148, 235);
             lblPassword.Name = "lblPassword";
             lblPassword.Size = new Size(79, 21);
@@ -86,7 +88,8 @@
             // 
             // btnLogin
             // 
-            btnLogin.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogin.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogin.ForeColor = Color.FromArgb(33, 52, 72);
             btnLogin.Location = new Point(654, 266);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(144, 30);
