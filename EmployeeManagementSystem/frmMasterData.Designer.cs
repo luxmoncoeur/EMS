@@ -111,7 +111,7 @@
             Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
             Name = "frmMasterData";
             Padding = new Padding(0, 0, 0, 57);
-            Text = "frmMasterData";
+            Text = "📖 Master Data";
             Load += frmMasterData_Load_1;
             pnlChildTitle.ResumeLayout(false);
             pnlChildTitle.PerformLayout();

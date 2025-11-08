@@ -29,21 +29,28 @@
         private void InitializeComponent()
         {
             pnlSideMenu = new Panel();
+            lblSection = new Label();
+            lblFullName = new Label();
+            bxtSettings = new Button();
             btnAddEmployee = new Button();
             btnMasterData = new Button();
             pnlTitleBar = new Panel();
+            lblMsg = new Label();
             btnClose = new Button();
             btnMaximize = new Button();
             btnMinimize = new Button();
             pnlStage = new Panel();
-            bxtSettings = new Button();
+            label1 = new Label();
             pnlSideMenu.SuspendLayout();
             pnlTitleBar.SuspendLayout();
+            pnlStage.SuspendLayout();
             SuspendLayout();
             // 
             // pnlSideMenu
             // 
-            pnlSideMenu.BackColor = Color.FromArgb(164, 204, 217);
+            pnlSideMenu.BackColor = Color.FromArgb(128, 161, 186);
+            pnlSideMenu.Controls.Add(lblSection);
+            pnlSideMenu.Controls.Add(lblFullName);
             pnlSideMenu.Controls.Add(bxtSettings);
             pnlSideMenu.Controls.Add(btnAddEmployee);
             pnlSideMenu.Controls.Add(btnMasterData);
@@ -54,10 +61,44 @@
             pnlSideMenu.Size = new Size(229, 449);
             pnlSideMenu.TabIndex = 0;
             // 
+            // lblSection
+            // 
+            lblSection.AutoSize = true;
+            lblSection.Font = new Font("Yu Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSection.ForeColor = Color.AliceBlue;
+            lblSection.Location = new Point(12, 410);
+            lblSection.Name = "lblSection";
+            lblSection.Size = new Size(89, 27);
+            lblSection.TabIndex = 4;
+            lblSection.Text = "Section";
+            // 
+            // lblFullName
+            // 
+            lblFullName.AutoSize = true;
+            lblFullName.Font = new Font("Yu Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblFullName.ForeColor = Color.AliceBlue;
+            lblFullName.Location = new Point(12, 380);
+            lblFullName.Name = "lblFullName";
+            lblFullName.Size = new Size(114, 27);
+            lblFullName.TabIndex = 3;
+            lblFullName.Text = "Full Name";
+            // 
+            // bxtSettings
+            // 
+            bxtSettings.BackColor = Color.FromArgb(145, 173, 200);
+            bxtSettings.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            bxtSettings.ForeColor = Color.White;
+            bxtSettings.Location = new Point(0, 108);
+            bxtSettings.Name = "bxtSettings";
+            bxtSettings.Size = new Size(229, 54);
+            bxtSettings.TabIndex = 2;
+            bxtSettings.Text = "SETTINGS";
+            bxtSettings.UseVisualStyleBackColor = false;
+            bxtSettings.Click += bxtSettings_Click;
+            // 
             // btnAddEmployee
             // 
-            btnAddEmployee.BackColor = Color.FromArgb(70, 130, 169);
-            btnAddEmployee.Dock = DockStyle.Top;
+            btnAddEmployee.BackColor = Color.FromArgb(145, 173, 200);
             btnAddEmployee.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAddEmployee.ForeColor = Color.White;
             btnAddEmployee.Location = new Point(0, 54);
@@ -70,8 +111,7 @@
             // 
             // btnMasterData
             // 
-            btnMasterData.BackColor = Color.FromArgb(70, 130, 169);
-            btnMasterData.Dock = DockStyle.Top;
+            btnMasterData.BackColor = Color.FromArgb(145, 173, 200);
             btnMasterData.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMasterData.ForeColor = Color.White;
             btnMasterData.Location = new Point(0, 0);
@@ -85,7 +125,8 @@
             // pnlTitleBar
             // 
             pnlTitleBar.AccessibleName = "";
-            pnlTitleBar.BackColor = Color.FromArgb(128, 161, 186);
+            pnlTitleBar.BackColor = Color.FromArgb(88, 160, 200);
+            pnlTitleBar.Controls.Add(lblMsg);
             pnlTitleBar.Controls.Add(btnClose);
             pnlTitleBar.Controls.Add(btnMaximize);
             pnlTitleBar.Controls.Add(btnMinimize);
@@ -95,6 +136,17 @@
             pnlTitleBar.Size = new Size(828, 48);
             pnlTitleBar.TabIndex = 1;
             pnlTitleBar.MouseDown += pnlTitleBar_MouseDown;
+            // 
+            // lblMsg
+            // 
+            lblMsg.AutoSize = true;
+            lblMsg.Font = new Font("Franklin Gothic Demi", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblMsg.ForeColor = SystemColors.ButtonHighlight;
+            lblMsg.Location = new Point(12, 7);
+            lblMsg.Name = "lblMsg";
+            lblMsg.Size = new Size(345, 30);
+            lblMsg.TabIndex = 3;
+            lblMsg.Text = "Employee Management System";
             // 
             // btnClose
             // 
@@ -136,25 +188,23 @@
             // pnlStage
             // 
             pnlStage.BackColor = Color.FromArgb(234, 239, 239);
+            pnlStage.Controls.Add(label1);
             pnlStage.Dock = DockStyle.Fill;
             pnlStage.Location = new Point(229, 48);
             pnlStage.Name = "pnlStage";
             pnlStage.Size = new Size(599, 449);
             pnlStage.TabIndex = 2;
             // 
-            // bxtSettings
+            // label1
             // 
-            bxtSettings.BackColor = Color.FromArgb(70, 130, 169);
-            bxtSettings.Dock = DockStyle.Top;
-            bxtSettings.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            bxtSettings.ForeColor = Color.White;
-            bxtSettings.Location = new Point(0, 108);
-            bxtSettings.Name = "bxtSettings";
-            bxtSettings.Size = new Size(229, 54);
-            bxtSettings.TabIndex = 2;
-            bxtSettings.Text = "SETTINGS";
-            bxtSettings.UseVisualStyleBackColor = false;
-            bxtSettings.Click += bxtSettings_Click;
+            label1.AutoSize = true;
+            label1.Font = new Font("Franklin Gothic Demi", 21.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(33, 52, 72);
+            label1.Location = new Point(15, 17);
+            label1.Name = "label1";
+            label1.Size = new Size(572, 37);
+            label1.TabIndex = 0;
+            label1.Text = "Welcome to Employee Management System";
             // 
             // frmMotherForm
             // 
@@ -166,10 +216,14 @@
             Controls.Add(pnlSideMenu);
             Controls.Add(pnlTitleBar);
             Name = "frmMotherForm";
-            Text = "Form1";
+            Text = "💻 Employee Management System";
             Load += frmMotherForm_Load;
             pnlSideMenu.ResumeLayout(false);
+            pnlSideMenu.PerformLayout();
             pnlTitleBar.ResumeLayout(false);
+            pnlTitleBar.PerformLayout();
+            pnlStage.ResumeLayout(false);
+            pnlStage.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -184,5 +238,9 @@
         private Button btnMasterData;
         private Panel pnlStage;
         private Button bxtSettings;
+        private Label lblFullName;
+        private Label lblSection;
+        private Label lblMsg;
+        private Label label1;
     }
 }

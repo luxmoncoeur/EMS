@@ -5,12 +5,15 @@ namespace EmployeeManagementSystem
         public frmMotherForm()
         {
             InitializeComponent();
+            lblFullName.Text = LoginPage.fullname;
+            lblSection.Text = LoginPage.section;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        
 
         private void frmMotherForm_Load(object sender, EventArgs e) // form load
         {
@@ -18,9 +21,12 @@ namespace EmployeeManagementSystem
             this.ControlBox = false; // para mawala ang minimize, maximize, close button
             this.DoubleBuffered = true; // para mawala ang flicker sa form
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea; // para ma maximize ang form sa working area lang
+   
+
 
 
         }
+        
         private Button btn;
         private Panel leftBorderBtn;
         private Form currentChildForm;

@@ -36,6 +36,7 @@ namespace EmployeeManagementSystem
         private Label lblConPass;
         private TextBox txtPassword;
         private Button btnExecute;
+        private Button btnDownload;
         private TabPage tpageSectionRegistration;
 
         private void InitializeComponent()
@@ -44,6 +45,7 @@ namespace EmployeeManagementSystem
             tpageUserRegistration = new TabPage();
             dgvUsers = new DataGridView();
             pnlSideBar = new Panel();
+            btnDownload = new Button();
             btnExecute = new Button();
             lblNumber = new Label();
             lblMatch = new Label();
@@ -97,12 +99,15 @@ namespace EmployeeManagementSystem
             dgvUsers.Dock = DockStyle.Fill;
             dgvUsers.Location = new Point(203, 3);
             dgvUsers.Name = "dgvUsers";
+            dgvUsers.ReadOnly = true;
             dgvUsers.Size = new Size(850, 551);
             dgvUsers.TabIndex = 1;
+            dgvUsers.CellContentDoubleClick += dgvUsers_CellContentDoubleClick;
             // 
             // pnlSideBar
             // 
             pnlSideBar.BackColor = Color.FromArgb(164, 204, 217);
+            pnlSideBar.Controls.Add(btnDownload);
             pnlSideBar.Controls.Add(btnExecute);
             pnlSideBar.Controls.Add(lblNumber);
             pnlSideBar.Controls.Add(lblMatch);
@@ -125,10 +130,21 @@ namespace EmployeeManagementSystem
             pnlSideBar.Size = new Size(200, 551);
             pnlSideBar.TabIndex = 0;
             // 
+            // btnDownload
+            // 
+            btnDownload.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDownload.Location = new Point(97, 377);
+            btnDownload.Name = "btnDownload";
+            btnDownload.Size = new Size(78, 27);
+            btnDownload.TabIndex = 15;
+            btnDownload.Text = "Download";
+            btnDownload.UseVisualStyleBackColor = true;
+            btnDownload.Click += btnDownload_Click;
+            // 
             // btnExecute
             // 
             btnExecute.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnExecute.Location = new Point(97, 388);
+            btnExecute.Location = new Point(13, 377);
             btnExecute.Name = "btnExecute";
             btnExecute.Size = new Size(78, 27);
             btnExecute.TabIndex = 14;
@@ -139,22 +155,24 @@ namespace EmployeeManagementSystem
             // lblNumber
             // 
             lblNumber.AutoSize = true;
-            lblNumber.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNumber.Location = new Point(24, 368);
+            lblNumber.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNumber.Location = new Point(14, 357);
             lblNumber.Name = "lblNumber";
-            lblNumber.Size = new Size(67, 20);
+            lblNumber.Size = new Size(58, 17);
             lblNumber.TabIndex = 13;
             lblNumber.Text = "Number";
+            lblNumber.TextChanged += lblNumber_TextChanged;
             // 
             // lblMatch
             // 
             lblMatch.AutoSize = true;
-            lblMatch.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMatch.Location = new Point(24, 348);
+            lblMatch.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMatch.Location = new Point(14, 337);
             lblMatch.Name = "lblMatch";
-            lblMatch.Size = new Size(53, 20);
+            lblMatch.Size = new Size(46, 17);
             lblMatch.TabIndex = 12;
             lblMatch.Text = "Match";
+            lblMatch.TextChanged += lblMatch_TextChanged;
             lblMatch.Click += lblMatch_Click;
             // 
             // txtConfirmPassword
@@ -165,6 +183,7 @@ namespace EmployeeManagementSystem
             txtConfirmPassword.PasswordChar = '*';
             txtConfirmPassword.Size = new Size(161, 27);
             txtConfirmPassword.TabIndex = 11;
+            txtConfirmPassword.TextChanged += txtConfirmPassword_TextChanged;
             // 
             // lblConPass
             // 
@@ -184,6 +203,7 @@ namespace EmployeeManagementSystem
             txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(161, 27);
             txtPassword.TabIndex = 9;
+            txtPassword.TextChanged += txtPassword_TextChanged;
             // 
             // lblPassword
             // 
@@ -221,6 +241,7 @@ namespace EmployeeManagementSystem
             cbSection.Name = "cbSection";
             cbSection.Size = new Size(154, 28);
             cbSection.TabIndex = 5;
+            cbSection.DropDown += cbSection_DropDown;
             // 
             // label1
             // 
@@ -337,7 +358,7 @@ namespace EmployeeManagementSystem
 
             if (result == DialogResult.Yes)
             {
-                string query = "Insert into [Users] ([UserName], [Password],[Section],[Age], [FullName]) values ('" + txtUserName.Text + "','" + txtPassword.Text + "','" + cbSection.Text + "','" + txtAge.Text + "','" + txtFullName.Text + "')";
+                string query = "Insert into [tblUsers] ([UserName], [Password],[Section],[Age], [FullName]) values ('" + txtUserName.Text + "','" + txtPassword.Text + "','" + cbSection.Text + "','" + txtAge.Text + "','" + txtFullName.Text + "')";
                 CRUD.CRUD.CUD(query);
                 MessageBox.Show("Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 CRUD.CRUD.RETRIEVEDTG(dgvUsers, "SELECT * FROM [tblUsers]");
@@ -346,7 +367,68 @@ namespace EmployeeManagementSystem
 
         private void frmSettings_Load(object sender, EventArgs e)
         {
+            CRUD.CRUD.RETRIEVECBO(cbSection, "SELECT [ID], [Section] FROM [tblSection] ORDER BY [Section] asc", "Section", "ID");
+            CRUD.CRUD.RETRIEVEDTG(dgvUsers, "SELECT * FROM [tblUsers]");
+        }
+
+        private void cbSection_DropDown(object sender, EventArgs e)
+        {
 
         }
+
+        private void lblMatch_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == txtConfirmPassword.Text)
+            {
+                lblMatch.Text = "✔ Match";
+                lblMatch.ForeColor = Color.Green;
+            }
+            else
+            {
+                lblMatch.Text = "✘ Match";
+                lblMatch.ForeColor = Color.Red;
+            }
+        }
+
+        private void lblNumber_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtPassword.Text, @"\d"))
+            {
+                lblNumber.Text = "✔ Number";
+                lblNumber.ForeColor = Color.Green;
+            }
+            else
+            {
+                lblNumber.Text = "✘ Number";
+                lblNumber.ForeColor = Color.Red;
+            }
+            Match();
+        }
+
+        private void btnDownload_Click(object sender, EventArgs e)
+        {
+            ExportDgv.ExportToExcel(dgvUsers, "ExportedData_" + DateTime.Now.ToString("MM-dd-yyyy"));
+        }
+
+        private void dgvUsers_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string TemplatePath = @"C:\Users\GioAngeloLat\Documents\Employee_Details_Template.xlsx";
+            string SavePath = @"C:\Users\GioAngeloLat\Documents\EmployeeDetails.xlsx";
+
+            ExportCellFromDgv.ExportFromTemplate(TemplatePath,
+            SavePath,
+            "B3", dgvUsers.Rows[e.RowIndex].Cells["FullName"].Value,
+            "C3", dgvUsers.Rows[e.RowIndex].Cells["Section"].Value,
+            "A3", dgvUsers.Rows[e.RowIndex].Cells["Username"].Value,
+            "D3", dgvUsers.Rows[e.RowIndex].Cells["Age"].Value,
+            "B3", LoginPage.fullname,
+            "F3", DateTime.Now.ToString("yyyy-MM-dd"));
+
+        }
+
+
+
+
+
     }
 }

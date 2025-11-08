@@ -170,22 +170,8 @@ namespace EmployeeManagementSystem
         private void cmbSection_DropDown(object sender, EventArgs e)
         {
 
-            try
-            {
-                cmbSection.DataSource = null;
-                cmbSection.Items.Clear();
-
-                bool loaded = CRUD.CRUD.RETRIEVECBO(cmbSection, "SELECT ID, Section FROM tblSections", "Section", "ID");
-
-                if (!loaded)
-                {
-                    MessageBox.Show("Failed to load sections.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error loading sections: " + ex.Message);
-            }
+            string sql = "SELECT Section FROM tblSection";
+            CRUD.CRUD.RETRIEVECBO(cmbSection, sql, "Section", "Section");
         }
     }
 } 

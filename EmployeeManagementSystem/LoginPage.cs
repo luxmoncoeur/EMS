@@ -19,12 +19,14 @@ namespace EmployeeManagementSystem
         {
             InitializeComponent();
         }
+        public static string fullname, section, age;
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
-            string fullname, section, age;
+
+            //string fullname, section, age;
             if (string.IsNullOrWhiteSpace(username) && string.IsNullOrWhiteSpace(password))
             {
                 MessageBox.Show("Please enter both username and password.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -43,7 +45,7 @@ namespace EmployeeManagementSystem
             }
             else
             {
-                string sql = $"SELECT [FullName], [Section], [Age], [Username], [Password] FROM Users WHERE Username = '{username}' AND Password = '{password}'";
+                string sql = $"SELECT [FullName], [Section], [Age], [Username], [Password] FROM tblUsers WHERE Username = '{username}' AND Password = '{password}'";
                 bool isAuthenticated = CRUD.CRUD.RETRIEVESINGLE(sql);
 
                 string dbEmail, dbPassword;

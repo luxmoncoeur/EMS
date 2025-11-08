@@ -50,11 +50,13 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = Color.FromArgb(116, 155, 194);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(1, 0);
+            panel1.Margin = new Padding(4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(799, 55);
+            panel1.Size = new Size(1027, 73);
             panel1.TabIndex = 0;
             // 
             // label1
@@ -62,7 +64,8 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 22F, FontStyle.Bold);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(11, 9);
+            label1.Location = new Point(14, 12);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(240, 41);
             label1.TabIndex = 0;
@@ -85,9 +88,11 @@
             groupBox1.Controls.Add(txtEmpID);
             groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox1.ForeColor = Color.FromArgb(33, 52, 72);
-            groupBox1.Location = new Point(1, 61);
+            groupBox1.Location = new Point(1, 81);
+            groupBox1.Margin = new Padding(4);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(799, 297);
+            groupBox1.Padding = new Padding(4);
+            groupBox1.Size = new Size(1027, 396);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "EMPLOYEE DETAILS MANUAL INSERT AND UPDATE";
@@ -96,9 +101,10 @@
             // 
             btnDelete.BackColor = Color.FromArgb(68, 125, 155);
             btnDelete.ForeColor = Color.MintCream;
-            btnDelete.Location = new Point(387, 228);
+            btnDelete.Location = new Point(498, 304);
+            btnDelete.Margin = new Padding(4);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(104, 33);
+            btnDelete.Size = new Size(134, 44);
             btnDelete.TabIndex = 12;
             btnDelete.Text = "DELETE";
             btnDelete.UseVisualStyleBackColor = false;
@@ -108,7 +114,8 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(115, 186);
+            label6.Location = new Point(148, 248);
+            label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
             label6.Size = new Size(81, 21);
             label6.TabIndex = 11;
@@ -119,7 +126,8 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(60, 148);
+            label5.Location = new Point(77, 197);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
             label5.Size = new Size(136, 21);
             label5.TabIndex = 10;
@@ -130,7 +138,8 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(58, 112);
+            label4.Location = new Point(75, 149);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Size = new Size(138, 21);
             label4.TabIndex = 9;
@@ -141,7 +150,8 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(39, 74);
+            label3.Location = new Point(50, 99);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(157, 21);
             label3.TabIndex = 8;
@@ -152,7 +162,8 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(27, 34);
+            label2.Location = new Point(35, 45);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(169, 21);
             label2.TabIndex = 7;
@@ -164,9 +175,10 @@
             // 
             btnInsertUpdate.BackColor = Color.FromArgb(68, 125, 155);
             btnInsertUpdate.ForeColor = Color.MintCream;
-            btnInsertUpdate.Location = new Point(202, 228);
+            btnInsertUpdate.Location = new Point(260, 304);
+            btnInsertUpdate.Margin = new Padding(4);
             btnInsertUpdate.Name = "btnInsertUpdate";
-            btnInsertUpdate.Size = new Size(179, 33);
+            btnInsertUpdate.Size = new Size(230, 44);
             btnInsertUpdate.TabIndex = 6;
             btnInsertUpdate.Text = "INSERT / UPDATE";
             btnInsertUpdate.UseVisualStyleBackColor = false;
@@ -176,9 +188,10 @@
             // 
             cmbSection.BackColor = Color.AliceBlue;
             cmbSection.FormattingEnabled = true;
-            cmbSection.Location = new Point(202, 183);
+            cmbSection.Location = new Point(260, 244);
+            cmbSection.Margin = new Padding(4);
             cmbSection.Name = "cmbSection";
-            cmbSection.Size = new Size(289, 29);
+            cmbSection.Size = new Size(370, 29);
             cmbSection.TabIndex = 5;
             cmbSection.DropDown += cmbSection_DropDown;
             // 
@@ -187,9 +200,10 @@
             button1.BackColor = Color.FromArgb(68, 125, 155);
             button1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.MintCream;
-            button1.Location = new Point(476, 32);
+            button1.Location = new Point(612, 43);
+            button1.Margin = new Padding(4);
             button1.Name = "button1";
-            button1.Size = new Size(75, 25);
+            button1.Size = new Size(96, 33);
             button1.TabIndex = 4;
             button1.Text = "Search";
             button1.UseVisualStyleBackColor = false;
@@ -198,45 +212,51 @@
             // txtLocalNumber
             // 
             txtLocalNumber.BackColor = Color.AliceBlue;
-            txtLocalNumber.Location = new Point(202, 148);
+            txtLocalNumber.Location = new Point(260, 197);
+            txtLocalNumber.Margin = new Padding(4);
             txtLocalNumber.Name = "txtLocalNumber";
-            txtLocalNumber.Size = new Size(289, 29);
+            txtLocalNumber.Size = new Size(370, 29);
             txtLocalNumber.TabIndex = 3;
             // 
             // txtEmailAddress
             // 
             txtEmailAddress.BackColor = Color.AliceBlue;
-            txtEmailAddress.Location = new Point(202, 109);
+            txtEmailAddress.Location = new Point(260, 145);
+            txtEmailAddress.Margin = new Padding(4);
             txtEmailAddress.Name = "txtEmailAddress";
-            txtEmailAddress.Size = new Size(356, 29);
+            txtEmailAddress.Size = new Size(457, 29);
             txtEmailAddress.TabIndex = 2;
             // 
             // txtRequestorName
             // 
             txtRequestorName.BackColor = Color.AliceBlue;
-            txtRequestorName.Location = new Point(202, 74);
+            txtRequestorName.Location = new Point(260, 99);
+            txtRequestorName.Margin = new Padding(4);
             txtRequestorName.Name = "txtRequestorName";
-            txtRequestorName.Size = new Size(356, 29);
+            txtRequestorName.Size = new Size(457, 29);
             txtRequestorName.TabIndex = 1;
             // 
             // txtEmpID
             // 
             txtEmpID.BackColor = Color.AliceBlue;
-            txtEmpID.Location = new Point(202, 31);
+            txtEmpID.Location = new Point(260, 41);
+            txtEmpID.Margin = new Padding(4);
             txtEmpID.Name = "txtEmpID";
-            txtEmpID.Size = new Size(238, 29);
+            txtEmpID.Size = new Size(305, 29);
             txtEmpID.TabIndex = 0;
             // 
             // frmAddEmployee
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(234, 239, 239);
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1029, 600);
             Controls.Add(groupBox1);
             Controls.Add(panel1);
+            Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Margin = new Padding(4);
             Name = "frmAddEmployee";
-            Text = "frmAddEmployee";
+            Text = "👥 Add Employee";
             Load += frmAddEmployee_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

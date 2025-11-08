@@ -34,6 +34,7 @@
             lblUsername = new Label();
             lblPassword = new Label();
             btnLogin = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // lblTitle
@@ -50,7 +51,7 @@
             // txtUsername
             // 
             txtUsername.Font = new Font("Segoe UI", 15F);
-            txtUsername.Location = new Point(237, 186);
+            txtUsername.Location = new Point(237, 204);
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(561, 34);
             txtUsername.TabIndex = 1;
@@ -58,7 +59,7 @@
             // txtPassword
             // 
             txtPassword.Font = new Font("Segoe UI", 15F);
-            txtPassword.Location = new Point(237, 226);
+            txtPassword.Location = new Point(237, 244);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(561, 34);
@@ -69,7 +70,7 @@
             lblUsername.AutoSize = true;
             lblUsername.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblUsername.ForeColor = Color.FromArgb(33, 52, 72);
-            lblUsername.Location = new Point(148, 195);
+            lblUsername.Location = new Point(148, 213);
             lblUsername.Name = "lblUsername";
             lblUsername.Size = new Size(83, 21);
             lblUsername.TabIndex = 3;
@@ -80,7 +81,7 @@
             lblPassword.AutoSize = true;
             lblPassword.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblPassword.ForeColor = Color.FromArgb(33, 52, 72);
-            lblPassword.Location = new Point(148, 235);
+            lblPassword.Location = new Point(148, 253);
             lblPassword.Name = "lblPassword";
             lblPassword.Size = new Size(79, 21);
             lblPassword.TabIndex = 4;
@@ -90,7 +91,7 @@
             // 
             btnLogin.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.ForeColor = Color.FromArgb(33, 52, 72);
-            btnLogin.Location = new Point(654, 266);
+            btnLogin.Location = new Point(654, 284);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(144, 30);
             btnLogin.TabIndex = 5;
@@ -98,20 +99,33 @@
             btnLogin.UseVisualStyleBackColor = true;
             btnLogin.Click += btnLogin_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Yu Gothic UI Semibold", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(70, 130, 169);
+            label1.Location = new Point(226, 144);
+            label1.Name = "label1";
+            label1.Size = new Size(520, 45);
+            label1.TabIndex = 6;
+            label1.Text = "Employment Management System";
+            // 
             // LoginPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Azure;
             ClientSize = new Size(940, 404);
+            Controls.Add(label1);
             Controls.Add(btnLogin);
             Controls.Add(lblPassword);
             Controls.Add(lblUsername);
             Controls.Add(txtPassword);
             Controls.Add(txtUsername);
             Controls.Add(lblTitle);
+            Font = new Font("Yu Gothic UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Name = "LoginPage";
-            Text = "LoginPage";
+            Text = "🚪 Login Page";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -124,5 +138,6 @@
         private Label lblUsername;
         private Label lblPassword;
         private Button btnLogin;
+        private Label label1;
     }
 }

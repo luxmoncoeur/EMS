@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\GioAngeloLat\\Desktop\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem.csproj": {}
+    "C:\\Users\\GioAngeloLat\\Documents\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\GioAngeloLat\\Desktop\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem.csproj": {
+    "C:\\Users\\GioAngeloLat\\Documents\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\GioAngeloLat\\Desktop\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem.csproj",
+        "projectUniqueName": "C:\\Users\\GioAngeloLat\\Documents\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem.csproj",
         "projectName": "EmployeeManagementSystem",
-        "projectPath": "C:\\Users\\GioAngeloLat\\Desktop\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem.csproj",
+        "projectPath": "C:\\Users\\GioAngeloLat\\Documents\\EMS\\EmployeeManagementSystem\\EmployeeManagementSystem.csproj",
         "packagesPath": "C:\\Users\\GioAngeloLat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\GioAngeloLat\\Desktop\\EMS\\EmployeeManagementSystem\\obj\\",
+        "outputPath": "C:\\Users\\GioAngeloLat\\Documents\\EMS\\EmployeeManagementSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\GioAngeloLat\\AppData\\Roaming\\NuGet\\NuGet.Config",
